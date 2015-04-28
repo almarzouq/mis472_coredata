@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Person" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="interest" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Topic" inverseName="persons" inverseEntity="Topic" syncable="YES"/>
+    </entity>
+    <entity name="Topic" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="persons" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="interest" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-326" positionY="-115" width="128" height="88"/>
+        <element name="Topic" positionX="-90" positionY="147" width="128" height="73"/>
+    </elements>
 </model>
